@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
 import { io } from 'socket.io-client'
 import useSocket from '../../src/lib/Hooks'
@@ -250,18 +249,7 @@ const Room = () => {
 
   return (
     <div>
-      <Script src="https://unpkg.com/three@0.133.0/build/three.js"></Script>
-      <Script src="https://unpkg.com/three@0.133.0/examples/js/loaders/GLTFLoader.js"></Script>
-      <Script src="https://unpkg.com/three@0.133.0/examples/js/controls/OrbitControls.js"></Script>
-      <Script src="https://unpkg.com/@pixiv/three-vrm@0.6.7/lib/three-vrm.js"></Script>
-      <Script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.5.1635989137/holistic.js"></Script>
-      <Script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></Script>
-      <Script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></Script>
-      <Script src="https://cdn.jsdelivr.net/npm/kalidokit@1.1/dist/kalidokit.umd.js"></Script>
-      <video autoPlay ref={userVideoRef} />
+      {/* <video autoPlay ref={userVideoRef} />
       <video autoPlay ref={peerVideoRef} />
       <button onClick={toggleMic} type='button'>
         {micActive ? 'Mute Mic' : 'UnMute Mic'}
@@ -271,7 +259,7 @@ const Room = () => {
       </button>
       <button onClick={toggleCamera} type='button'>
         {cameraActive ? 'Stop Camera' : 'Start Camera'}
-      </button>
+      </button> */}
       
       <link rel="stylesheet" href="style.css" />
 
